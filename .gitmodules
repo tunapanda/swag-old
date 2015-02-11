@@ -1,0 +1,3 @@
+[submodule "extern/swagmaps"]
+	path = extern/swagmaps
+	url = https://github.com/tunapanda/swagmaps.git
