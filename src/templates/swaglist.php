@@ -1,0 +1,3 @@
+<a href="main/logout">logout</a><br/><br/>
+
+here be swag...
