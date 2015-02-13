@@ -7,6 +7,11 @@
 	 */
 	class MainController extends WebController {
 
+		private $config;
+
+		/**
+		 * Constructor.
+		 */
 		function MainController() {
 			session_start();
 
@@ -16,6 +21,27 @@
 			$this->method("getmap")->args("filename");
 			$this->method("login")->args("username","password");
 			$this->setDefaultMethod("main");
+
+			$this->loadConfig();
+		}
+
+		/**
+		 * Load configuration.
+		 */
+		private function loadConfig() {
+			$configFileName=__DIR__."/../../config.php";
+
+			if (!file_exists($configFileName))
+				exit("Config file does not exists, looking for: ".realpath(__DIR__."/../../")."/config.php");
+
+			require_once($configFileName);
+
+			$this->config=array();
+
+			$this->config["xapiEndpoint"]=$xapiEndpoint;
+			$this->config["xapiUsername"]=$xapiUsername;
+			$this->config["xapiPassword"]=$xapiPassword;
+			$this->config["actorDomain"]=$actorDomain;
 		}
 
 		/**
@@ -96,7 +122,16 @@
 		 * Show a swagmap.
 		 */
 		function showmap($filename) {
+			$this->requireLogin();
 
+			$t=new Template(__DIR__."/../templates/swagmap.php");
+			$t->set("baseUrl",RewriteUtil::getBaseUrl());
+			$t->set("mapUrl",RewriteUtil::getBaseUrl()."/main/getmap?filename=".urlencode($filename));
+			$t->set("actorEmail",$_SESSION["username"]."@".$this->config["actorDomain"]);
+			$t->set("xapiEndpoint",RewriteUtil::getBaseUrl()."xapiproxy");
+			$t->set("xapiUsername",$this->config["xapiUsername"]);
+			$t->set("xapiPassword",$this->config["xapiPassword"]);
+			$t->show();
 		}
 
 		/**
@@ -106,6 +141,14 @@
 			$swagmapdir=__DIR__."/../../extern/swagmaps";
 
 			echo file_get_contents($swagmapdir."/".$filename);
+		}
+
+		/**
+		 * Redirect to the frontpage if not logged in.
+		 */
+		protected function requireLogin() {
+			if (!isset($_SESSION["username"]))
+				$this->redirect();
 		}
 
 		/**
