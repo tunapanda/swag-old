@@ -42,6 +42,9 @@
 			$this->config["xapiUsername"]=$xapiUsername;
 			$this->config["xapiPassword"]=$xapiPassword;
 			$this->config["actorDomain"]=$actorDomain;
+
+			if (isset($useProxy))
+				$this->config["useProxy"]=$useProxy;
 		}
 
 		/**
@@ -128,7 +131,13 @@
 			$t->set("baseUrl",RewriteUtil::getBaseUrl());
 			$t->set("mapUrl",RewriteUtil::getBaseUrl()."/main/getmap?filename=".urlencode($filename));
 			$t->set("actorEmail",$_SESSION["username"]."@".$this->config["actorDomain"]);
-			$t->set("xapiEndpoint",RewriteUtil::getBaseUrl()."xapiproxy");
+
+			if (isset($this->config["useProxy"]) && $this->config["useProxy"])
+				$t->set("xapiEndpoint",RewriteUtil::getBaseUrl()."xapiproxy");
+
+			else
+				$t->set("xapiEndpoint",$this->config["xapiEndpoint"]);
+
 			$t->set("xapiUsername",$this->config["xapiUsername"]);
 			$t->set("xapiPassword",$this->config["xapiPassword"]);
 			$t->show();
