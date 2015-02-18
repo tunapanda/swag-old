@@ -2,7 +2,8 @@
 <html>
 	<head>
 	    <base href="<?php echo $baseUrl; ?>"/>
-		<script src="p5.min.js"></script>
+		<script src="extern/swagmap/extern/p5.js"></script>
+		<script src="extern/swagmap/extern/tincan.js"></script>
 		<script src="extern/swagmap/bin/swagmap.min.js"></script>
 		<style> 
 			body {
