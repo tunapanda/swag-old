@@ -34,8 +34,6 @@ Swagmaps
 
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
 
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
-
 A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not 
 yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
 so the depending swagifacts are not shown unless the prerequisites are completed.
@@ -51,9 +49,11 @@ prototype to test the functionality, the goal is that this should be a compellin
 interaction metaphors and animations. The following images can be seen as a mood board to serve as inspiration for what
 we want the application to look like eventually.
 
-The swagmap application is developed on github here:
+<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_1.png" />
+<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_2.png" />
+<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_3.jpg" />
 
-https://github.com/tunapanda/swagmapviewer
+The swagmap application is developed on github here: https://github.com/tunapanda/swagmapviewer
 
 Swagifacts
 ----------
