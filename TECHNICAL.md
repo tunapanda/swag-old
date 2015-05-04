@@ -86,8 +86,8 @@ integrate with the rest of the architecture. H5P is an example of such a tool. H
 information from as many sources as possible, also from sources that do not support xAPI. In these cases, we use a reporting 
 application to bridge the gap from those systems to our LRS. 
 
-One example of such a reporter application is ktouchxapi, which takes statistics from the touch typing tutor application 
-KTouch and inserts it into our xAPI compliant LRS.
+One example of such a reporter application is [ktouchxapi](https://github.com/tunapanda/ktouchxapi), which takes statistics
+from the touch typing tutor application KTouch and inserts it into our xAPI compliant LRS.
 
 In order to have a modular approach to the architecture of the system, the reporting application doesn’t have dependencies 
 on any other components of the system, other than the fact that it speaks xAPI. Reporting applications are command line tools 
