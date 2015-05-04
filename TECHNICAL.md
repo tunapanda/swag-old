@@ -33,6 +33,7 @@ Swagmaps
 --------
 
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
+
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
 
 A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not 
