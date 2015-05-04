@@ -49,9 +49,9 @@ prototype to test the functionality, the goal is that this should be a compellin
 interaction metaphors and animations. The following images can be seen as a mood board to serve as inspiration for what
 we want the application to look like eventually.
 
-<img align="center" height="180" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_1.png" />
-<img align="center" height="180" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_2.png" />
-<img align="center" height="180" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_3.jpg" />
+<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_1.png" />
+<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_2.png" />
+<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_3.jpg" />
 
 The swagmap application is developed on github here:
 
