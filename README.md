@@ -1,6 +1,11 @@
 # swag
 *swag* is the codename for skills that help people earn a higher income and achieve greater personal freedom through self-expression. This is the software that helps people achieve more *swag*.
 
+Related
+-------
+
+* (Swag Technical Overview)[TECHNICAL.md)
+
 ## The Origins of *swag*
 
 *Teenager in Kibera, Nairobi, walks into a Tunapanda computer lab after school wearing his school uniform. The fat part of his tie is short, the skinny part goes down to his knees.*
