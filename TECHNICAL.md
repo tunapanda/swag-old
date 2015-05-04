@@ -32,9 +32,7 @@ There are some concepts that work together to make up the complete system. These
 Swagmaps
 --------
 
-<div style="float: right">
-    <img src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png"/>
-</div>
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
 
 A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not 
 yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
