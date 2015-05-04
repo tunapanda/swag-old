@@ -88,7 +88,7 @@ programming languages.
 Reporting Applications
 ----------------------
 
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_ktouchxapi_screenshot.png" />
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_ktouchxapi_screenshot.png" border="10"/>
 
 When we create swagifacts, we can make it easy for ourselves and choose tools that support xAPI, and these will easily 
 integrate with the rest of the architecture. H5P is an example of such a tool. However, we would like to be able to gather 
