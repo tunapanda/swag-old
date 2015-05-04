@@ -2,9 +2,9 @@
 <html>
 	<head>
 	    <base href="<?php echo $baseUrl; ?>"/>
-		<script src="extern/swagmap/extern/p5.js"></script>
-		<script src="extern/swagmap/extern/tincan.js"></script>
-		<script src="extern/swagmap/bin/swagmap.min.js"></script>
+		<script src="extern/swagmapviewer/extern/p5.js"></script>
+		<script src="extern/swagmapviewer/extern/tincan.js"></script>
+		<script src="extern/swagmapviewer/bin/swagmap.min.js"></script>
 		<style> 
 			body {
 				padding: 0; 

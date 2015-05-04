@@ -29,12 +29,14 @@
 		 * Load configuration.
 		 */
 		private function loadConfig() {
-			$configFileName=__DIR__."/../../config.php";
+			$configFileName=__DIR__."/../../config.ini";
 
 			if (!file_exists($configFileName))
-				exit("Config file does not exists, looking for: ".realpath(__DIR__."/../../")."/config.php");
+				exit("Config file does not exists, looking for: ".realpath(__DIR__."/../../")."/config.ini");
 
-			require_once($configFileName);
+			$this->config=parse_ini_file($configFileName);
+
+			/*require_once($configFileName);
 
 			$this->config=array();
 
@@ -44,7 +46,7 @@
 			$this->config["actorDomain"]=$actorDomain;
 
 			if (isset($useProxy))
-				$this->config["useProxy"]=$useProxy;
+				$this->config["useProxy"]=$useProxy;*/
 		}
 
 		/**
@@ -52,7 +54,7 @@
 		 * Show list of swagmaps or the login screen.
 		 */
 		function main() {
-			if (!isset($_SESSION["username"])) {
+			if (!$this->getCurrentUsername()) {
 				$t=new Template(__DIR__."/../templates/login.php");
 				$t->set("message",NULL);
 				$this->showContent($t);
@@ -130,7 +132,7 @@
 			$t=new Template(__DIR__."/../templates/swagmap.php");
 			$t->set("baseUrl",RewriteUtil::getBaseUrl());
 			$t->set("mapUrl",RewriteUtil::getBaseUrl()."/main/getmap?filename=".urlencode($filename));
-			$t->set("actorEmail",$_SESSION["username"]."@".$this->config["actorDomain"]);
+			$t->set("actorEmail",$this->getCurrentUsername()."@".$this->config["actorDomain"]);
 
 			if (isset($this->config["useProxy"]) && $this->config["useProxy"])
 				$t->set("xapiEndpoint",RewriteUtil::getBaseUrl()."xapiproxy");
@@ -156,6 +158,9 @@
 		 * Redirect to the frontpage if not logged in.
 		 */
 		protected function requireLogin() {
+			if (isset($this->config["username"]))
+				return;
+
 			if (!isset($_SESSION["username"]))
 				$this->redirect();
 		}
@@ -171,5 +176,18 @@
 
 			header("Location: ".$url);
 			exit();
+		}
+
+		/**
+		 * Get current username.
+		 */
+		protected function getCurrentUsername() {
+			if (isset($_SESSION["username"]))
+				return $_SESSION["username"];
+
+			if (isset($this->config["username"]))
+				return $this->config["username"];
+
+			return NULL;
 		}
 	}
