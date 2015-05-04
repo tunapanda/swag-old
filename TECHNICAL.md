@@ -73,6 +73,8 @@ We have started creating swagifacts in H5P, an open source tool for creating e-l
 Learning Record Store
 ---------------------
 
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
+
 The learning record store keeps track of the progress for each user. In order to talk to the LRS we use the xAPI protocol. 
 The LRS is a standardized component that speaks xAPI, i.e. not something we have built specifically for the Swag system, and 
 we can replace the currently used LRS with another one as long as that one speak xAPI. We currently use Learning Locker, 
@@ -85,6 +87,8 @@ programming languages.
 
 Reporting Applications
 ----------------------
+
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_ktouchxapi_screenshot.png" />
 
 When we create swagifacts, we can make it easy for ourselves and choose tools that support xAPI, and these will easily 
 integrate with the rest of the architecture. H5P is an example of such a tool. However, we would like to be able to gather 
