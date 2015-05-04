@@ -11,8 +11,9 @@ computer games, and tries to trigger the users curiosity for exploration and des
 Concepts
 --------
 
-There are some concepts that work together to make up the complete system. These are described in more detail on the 
-following pages.
+There are some concepts that work together to make up the complete system. These are described in more detail throughout this document.
+
+![diagram](https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png)
 
 * __Swagmap__  
   A map of interconnected nodes that guides the user through the learning experience.
