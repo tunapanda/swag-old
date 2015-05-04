@@ -36,6 +36,8 @@ A Swagmap is a map of interconnected nodes. Each node represents a swagifact, an
 yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
 so the depending swagifacts are not shown unless the prerequisites are completed.
 
+![swagmap viewer](https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png)
+
 Clicking on a swagifact in the swagmap will open up information showing what the user needs to do for that swagifact to be
 completed. If the swagifact can be completed online, the user will be taken directly to where the swagifact can be completed.
 
