@@ -53,9 +53,7 @@ we want the application to look like eventually.
 <img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_2.png" />
 <img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_3.jpg" />
 
-The swagmap application is developed on github here:
-
-https://github.com/tunapanda/swagmapviewer
+The swagmap application is developed on github here: https://github.com/tunapanda/swagmapviewer
 
 Swagifacts
 ----------
