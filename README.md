@@ -4,7 +4,7 @@
 Related
 -------
 
-* (Swag Technical Overview)[TECHNICAL.md)
+* [Swag Technical Overview](TECHNICAL.md)
 
 ## The Origins of *swag*
 
