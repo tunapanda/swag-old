@@ -32,13 +32,13 @@ There are some concepts that work together to make up the complete system. These
 Swagmaps
 --------
 
-A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not 
-yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
-so the depending swagifacts are not shown unless the prerequisites are completed.
-
 <div style="float: right">
     <img src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png"/>
 </div>
+
+A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not 
+yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
+so the depending swagifacts are not shown unless the prerequisites are completed.
 
 Clicking on a swagifact in the swagmap will open up information showing what the user needs to do for that swagifact to be
 completed. If the swagifact can be completed online, the user will be taken directly to where the swagifact can be completed.
