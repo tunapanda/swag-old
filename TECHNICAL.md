@@ -15,6 +15,8 @@ There are some concepts that work together to make up the complete system. These
 
 ![diagram](https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png)
 
+<img src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png">
+
 * __Swagmap__  
   A map of interconnected nodes that guides the user through the learning experience.
  
