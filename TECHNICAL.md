@@ -12,7 +12,7 @@ Concepts
 --------
 
 <p align="right">
-![diagram](https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png)
+  <img src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
 </p>
 
 There are some concepts that work together to make up the complete system. These are described in more detail throughout this document.
