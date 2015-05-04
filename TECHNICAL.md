@@ -46,10 +46,9 @@ prototype to test the functionality, the goal is that this should be a compellin
 interaction metaphors and animations. The following images can be seen as a mood board to serve as inspiration for what
 we want the application to look like eventually.
 
-
 The swagmap application is developed on github here:
 
-https://github.com/tunapanda/swagmap
+https://github.com/tunapanda/swagmapviewer
 
 Swagifacts
 ----------
