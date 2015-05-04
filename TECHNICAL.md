@@ -13,7 +13,7 @@ Concepts
 
 There are some concepts that work together to make up the complete system. These are described in more detail throughout this document.
 
-<img align="right" width="50" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
+<img align="right" width="200" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
 
 * __Swagmap__  
   A map of interconnected nodes that guides the user through the learning experience.
