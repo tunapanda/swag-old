@@ -11,7 +11,7 @@ computer games, and tries to trigger the users curiosity for exploration and des
 Concepts
 --------
 
-<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
 
 There are some concepts that work together to make up the complete system. These are described in more detail throughout this document.
 
@@ -32,7 +32,7 @@ There are some concepts that work together to make up the complete system. These
 Swagmaps
 --------
 
-<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
 
 A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not 
 yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
