@@ -17,18 +17,16 @@ following pages.
 * __Swagmap__  
   A map of interconnected nodes that guides the user through the learning experience.
  
-* Swagifact
+* __Swagifact__  
   An atom of learning. Each node in the swagmap is an instance of swagifact. The same swagifact can be used in several
   swagmaps.
 
-* Learning Record Store
+* __Learning Record Store__  
   The database that keeps track of which swagifacts each user has completed.
 
-* Reporting Applications
+* __Reporting Applications__  
   An application that sits in the background and gather information about what the user does and reports this to the
   Learning Record Store.
-
-
 
 Swagmaps
 --------
