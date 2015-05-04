@@ -4,3 +4,6 @@
 [submodule "extern/minimvc"]
 	path = extern/minimvc
 	url = https://github.com/limikael/minimvc.git
+[submodule "extern/swagmapviewer"]
+	path = extern/swagmapviewer
+	url = https://github.com/tunapanda/swagmapviewer.git
