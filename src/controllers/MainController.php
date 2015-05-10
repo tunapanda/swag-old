@@ -1,6 +1,8 @@
 <?php
 
 	require_once __DIR__."/../utils/FileUtil.php";
+	require_once __DIR__."/../../extern/hybridauth/hybridauth/Hybrid/Auth.php";
+	require_once __DIR__."/../../extern/hybridauth/hybridauth/Hybrid/Endpoint.php";
 
 	/**
 	 * Controller class.
@@ -20,6 +22,7 @@
 			$this->method("showmap")->args("filename");
 			$this->method("getmap")->args("filename");
 			$this->method("login")->args("username","password");
+			$this->method("hybridlogin");
 			$this->setDefaultMethod("main");
 
 			$this->loadConfig();
@@ -35,26 +38,86 @@
 				exit("Config file does not exists, looking for: ".realpath(__DIR__."/../../")."/config.ini");
 
 			$this->config=parse_ini_file($configFileName);
-
-			/*require_once($configFileName);
-
-			$this->config=array();
-
-			$this->config["xapiEndpoint"]=$xapiEndpoint;
-			$this->config["xapiUsername"]=$xapiUsername;
-			$this->config["xapiPassword"]=$xapiPassword;
-			$this->config["actorDomain"]=$actorDomain;
-
-			if (isset($useProxy))
-				$this->config["useProxy"]=$useProxy;*/
 		}
+
+		/**
+		 * Login using hybrid auth.
+		 */
+		/*function hybridlogin() {
+			if (isset($_REQUEST['hauth_start']) || isset($_REQUEST['hauth_done'])) {
+				Hybrid_Endpoint::process();
+				return;
+			}
+
+			$config=array(
+				"base_url" => RewriteUtil::getBaseUrl()."main/hybridlogin",
+				"providers" => array (
+					// openid providers
+					"OpenID" => array (
+						"enabled" => true
+					),
+
+					"Yahoo" => array (
+						"enabled" => true,
+						"keys"    => array ( "key" => "", "secret" => "" ),
+					),
+
+					"AOL"  => array (
+						"enabled" => true
+					),
+
+					"Google" => array (
+						"enabled" => true,
+						"keys"    => array ( "id" => "", "secret" => "" ),
+					),
+
+					"Facebook" => array (
+						"enabled" => true,
+						"keys"    => array ( "id" => "688864157925566", "secret" => "264c57068855dbb2966f2cb185b517ed" ),
+						"trustForwarded" => false,
+						"scope"   => "email"
+					),
+
+					"Twitter" => array (
+						"enabled" => true,
+						"keys"    => array ( "key" => "", "secret" => "" )
+					),
+
+					// windows live
+					"Live" => array (
+						"enabled" => true,
+						"keys"    => array ( "id" => "", "secret" => "" )
+					),
+
+					"LinkedIn" => array (
+						"enabled" => true,
+						"keys"    => array ( "key" => "", "secret" => "" )
+					),
+
+					"Foursquare" => array (
+						"enabled" => true,
+						"keys"    => array ( "id" => "", "secret" => "" )
+					),
+				)
+			);
+
+			$hybridauth=new Hybrid_Auth($config);
+			$facebook=$hybridauth->authenticate("Facebook");
+			$user_profile = $facebook->getUserProfile();
+
+			print_r($user_profile);
+
+			//echo "Hi there! " . $user_profile->displayName;
+			//$twitter->setUserStatus( "Hello world!" );
+			//$user_contacts = $twitter->getUserContacts();
+		}*/
 
 		/**
 		 * The main page.
 		 * Show list of swagmaps or the login screen.
 		 */
 		function main() {
-			if (!$this->getCurrentUsername()) {
+			if (!$this->getCurrentEmail()) {
 				$t=new Template(__DIR__."/../templates/login.php");
 				$t->set("message",NULL);
 				$this->showContent($t);
@@ -78,7 +141,7 @@
 				return;
 			}
 
-			$_SESSION["username"]=$username;
+			$_SESSION["email"]=$username."@".$this->config["actorDomain"];
 			$this->redirect();
 		}
 
@@ -86,7 +149,7 @@
 		 * Log out the current user.
 		 */
 		function logout() {
-			unset($_SESSION["username"]);
+			unset($_SESSION["email"]);
 			$this->redirect();
 		}
 
@@ -132,7 +195,7 @@
 			$t=new Template(__DIR__."/../templates/swagmap.php");
 			$t->set("baseUrl",RewriteUtil::getBaseUrl());
 			$t->set("mapUrl",RewriteUtil::getBaseUrl()."/main/getmap?filename=".urlencode($filename));
-			$t->set("actorEmail",$this->getCurrentUsername()."@".$this->config["actorDomain"]);
+			$t->set("actorEmail",$this->getCurrentEmail());
 
 			if (isset($this->config["useProxy"]) && $this->config["useProxy"])
 				$t->set("xapiEndpoint",RewriteUtil::getBaseUrl()."xapiproxy");
@@ -158,10 +221,10 @@
 		 * Redirect to the frontpage if not logged in.
 		 */
 		protected function requireLogin() {
-			if (isset($this->config["username"]))
+			if (isset($this->config["email"]))
 				return;
 
-			if (!isset($_SESSION["username"]))
+			if (!isset($_SESSION["email"]))
 				$this->redirect();
 		}
 
@@ -179,14 +242,14 @@
 		}
 
 		/**
-		 * Get current username.
+		 * Get email for the current user.
 		 */
-		protected function getCurrentUsername() {
-			if (isset($_SESSION["username"]))
-				return $_SESSION["username"];
+		protected function getCurrentEmail() {
+			if (isset($_SESSION["email"]))
+				return $_SESSION["email"];
 
-			if (isset($this->config["username"]))
-				return $this->config["username"];
+			if (isset($this->config["email"]))
+				return $this->config["email"];
 
 			return NULL;
 		}

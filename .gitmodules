@@ -7,3 +7,6 @@
 [submodule "extern/swagmapviewer"]
 	path = extern/swagmapviewer
 	url = https://github.com/tunapanda/swagmapviewer.git
+[submodule "extern/hybridauth"]
+	path = extern/hybridauth
+	url = https://github.com/hybridauth/hybridauth.git
