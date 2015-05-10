@@ -51,18 +51,7 @@
 
 			$config=array(
 				"base_url" => RewriteUtil::getBaseUrl()."main/hybridlogin?provider=".$provider,
-				"providers" => array()
-/*					"Google" => array (
-						"enabled" => true,
-						"keys"    => array ( "id" => "", "secret" => "" ),
-					)
-
-					"Facebook" => array (
-						"enabled" => true,
-						"keys"    => array ( "id" => "688864157925566", "secret" => "264c57068855dbb2966f2cb185b517ed" ),
-						"trustForwarded" => false,
-						"scope"   => "email"
-					)*/
+				"providers" => array();
 			);
 
 			if (isset($this->config["facebookAppId"])) {
