@@ -10,3 +10,6 @@
 [submodule "extern/hybridauth"]
 	path = extern/hybridauth
 	url = https://github.com/hybridauth/hybridauth.git
+[submodule "extern/css-social-buttons"]
+	path = extern/css-social-buttons
+	url = https://github.com/samcollins/css-social-buttons.git

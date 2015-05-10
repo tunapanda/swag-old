@@ -22,7 +22,7 @@
 			$this->method("showmap")->args("filename");
 			$this->method("getmap")->args("filename");
 			$this->method("login")->args("username","password");
-			$this->method("hybridlogin");
+			$this->method("hybridlogin")->args("provider");
 			$this->setDefaultMethod("main");
 
 			$this->loadConfig();
@@ -43,88 +43,78 @@
 		/**
 		 * Login using hybrid auth.
 		 */
-		/*function hybridlogin() {
+		function hybridlogin($provider) {
 			if (isset($_REQUEST['hauth_start']) || isset($_REQUEST['hauth_done'])) {
 				Hybrid_Endpoint::process();
-				return;
+				exit();
 			}
 
 			$config=array(
-				"base_url" => RewriteUtil::getBaseUrl()."main/hybridlogin",
-				"providers" => array (
-					// openid providers
-					"OpenID" => array (
-						"enabled" => true
-					),
-
-					"Yahoo" => array (
-						"enabled" => true,
-						"keys"    => array ( "key" => "", "secret" => "" ),
-					),
-
-					"AOL"  => array (
-						"enabled" => true
-					),
-
-					"Google" => array (
+				"base_url" => RewriteUtil::getBaseUrl()."main/hybridlogin?provider=".$provider,
+				"providers" => array()
+/*					"Google" => array (
 						"enabled" => true,
 						"keys"    => array ( "id" => "", "secret" => "" ),
-					),
+					)
 
 					"Facebook" => array (
 						"enabled" => true,
 						"keys"    => array ( "id" => "688864157925566", "secret" => "264c57068855dbb2966f2cb185b517ed" ),
 						"trustForwarded" => false,
 						"scope"   => "email"
-					),
-
-					"Twitter" => array (
-						"enabled" => true,
-						"keys"    => array ( "key" => "", "secret" => "" )
-					),
-
-					// windows live
-					"Live" => array (
-						"enabled" => true,
-						"keys"    => array ( "id" => "", "secret" => "" )
-					),
-
-					"LinkedIn" => array (
-						"enabled" => true,
-						"keys"    => array ( "key" => "", "secret" => "" )
-					),
-
-					"Foursquare" => array (
-						"enabled" => true,
-						"keys"    => array ( "id" => "", "secret" => "" )
-					),
-				)
+					)*/
 			);
 
+			if (isset($this->config["facebookAppId"])) {
+				$config["providers"]["Facebook"]=array(
+					"enabled"=>true,
+					"trustForwarded"=>false,
+					"scope"=>"email",
+					"keys"=>array(
+						"id"=>$this->config["facebookAppId"],
+						"secret"=>$this->config["facebookSecret"]
+					)
+				);
+			}
+
 			$hybridauth=new Hybrid_Auth($config);
-			$facebook=$hybridauth->authenticate("Facebook");
-			$user_profile = $facebook->getUserProfile();
 
-			print_r($user_profile);
+			try {
+				$auth=$hybridauth->authenticate($provider);
+				$profile = $auth->getUserProfile();
 
-			//echo "Hi there! " . $user_profile->displayName;
-			//$twitter->setUserStatus( "Hello world!" );
-			//$user_contacts = $twitter->getUserContacts();
-		}*/
+				$_SESSION["email"]=$profile->email;
+				$this->redirect();
+			}
+
+			catch (Exception $e) {
+				$this->showLoginForm($e->getMessage());
+			}
+		}
 
 		/**
 		 * The main page.
 		 * Show list of swagmaps or the login screen.
 		 */
 		function main() {
-			if (!$this->getCurrentEmail()) {
-				$t=new Template(__DIR__."/../templates/login.php");
-				$t->set("message",NULL);
-				$this->showContent($t);
-				return;
-			}
+			if (!$this->getCurrentEmail())
+				$this->showLoginForm();
 
 			$this->showSwagList();
+		}
+
+		/**
+		 * Show login form, then exit.
+		 */
+		function showLoginForm($message=NULL) {
+			$t=new Template(__DIR__."/../templates/login.php");
+			$t->set("message",$message);
+
+			$t->set("showlogin", isset($this->config["actorDomain"]));
+			$t->set("showfacebook", isset($this->config["facebookAppId"]));
+
+			$this->showContent($t);
+			exit();
 		}
 
 		/**
@@ -134,12 +124,8 @@
 			$error=NULL;
 			$res=pam_auth($username,$password,$error);
 
-			if (!$res) {
-				$t=new Template(__DIR__."/../templates/login.php");
-				$t->set("message",$error);
-				$this->showContent($t);
-				return;
-			}
+			if (!$res)
+				$this->showLoginForm($error);
 
 			$_SESSION["email"]=$username."@".$this->config["actorDomain"];
 			$this->redirect();
