@@ -51,7 +51,7 @@
 
 			$config=array(
 				"base_url" => RewriteUtil::getBaseUrl()."main/hybridlogin?provider=".$provider,
-				"providers" => array();
+				"providers" => array()
 			);
 
 			if (isset($this->config["facebookAppId"])) {
