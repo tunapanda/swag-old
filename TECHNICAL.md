@@ -1,12 +1,18 @@
-Swag - Technical Overview
+Swag System
 =========================
 
 Introduction
 ------------
 
 Swag is a system for guiding learners through different learning paths. It does not dictate a specific path to the learner, 
-but suggests that some knowledge are prerequisites to other knowledge. It engages the user by relying on metaphors from 
+but suggests that some knowledge are prerequisites to other knowledge. 
+
+It engages the user by relying on metaphors from 
 computer games, and tries to trigger the users curiosity for exploration and desire for completeness.
+
+The system is also designed to be usable as a teaching aid in the classroom which in turn becomes a tool for propagating education through peer-to-peer learning.  
+
+The system allows for knowledge creation from someone who has knowledge in a given field and learners a like through suggestions 
 
 Concepts
 --------
