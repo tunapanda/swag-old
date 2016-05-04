@@ -21,21 +21,17 @@ The system allows for knowledge creation from someone who has knowledge in a giv
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
 
 There are some concepts that work together to make up the complete system. These are described in more detail throughout this document.
-
+* __Swagifact__  
+  An item/module of knowledge about a given concept.
+* __Swagpath__ 
+Collection of related Swagifacts
 * __Swagmap__  
   A map of interconnected nodes that guides the user through the learning experience.
- 
-* __Swagifact__  
-  An atom of learning. Each node in the swagmap is an instance of swagifact. The same swagifact can be used in several
-  swagmaps.
-
-* __Learning Record Store__  
-  The database that keeps track of which swagifacts each user has completed.
-
+* __Learning Record Store (LRS)__  
+  The database that keeps track of of users progress in a given thing.
 * __Reporting Applications__  
   An application that sits in the background and gather information about what the user does and reports this to the
   Learning Record Store.
-
 
 Setup
 ------------
@@ -44,6 +40,7 @@ Use case
 Features and capabilities
 ------------
 ####Swagpaths
+This feature is handled by the <a href="https://github.com/tunapanda/wp-swag">wp-swag</a> plugin. 
 ####Swagmaps
 ####Deliverables
 ####bagdges
