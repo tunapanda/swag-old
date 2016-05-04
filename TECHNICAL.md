@@ -52,6 +52,7 @@ Features and capabilities
 ####Managing users
 ####Deliverables
 ####Synchronisation
+Synchronisation utilizes the concepts of a version control system, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
 ####LRS
 ####H5P
 ####reporting application
