@@ -3,6 +3,7 @@ Swag System
 
 Introduction
 ------------
+####General overview
 
 Swag is a system for guiding learners through different learning paths. It does not dictate a specific path to the learner, 
 but suggests that some knowledge are prerequisites to other knowledge. 
@@ -14,8 +15,8 @@ The system is also designed to be usable as a teaching aid in the classroom whic
 
 The system allows for knowledge creation from someone who has knowledge in a given field and learners a like through suggestions 
 
-Concepts
---------
+####Concepts
+
 
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
 
@@ -34,6 +35,34 @@ There are some concepts that work together to make up the complete system. These
 * __Reporting Applications__  
   An application that sits in the background and gather information about what the user does and reports this to the
   Learning Record Store.
+
+
+Setup
+------------
+Use case
+------------
+Features and capabilities
+------------
+####Swagpaths
+####Swagmaps
+####Deliverables
+####bagdges
+####Lesson plans
+####Feedback
+####Managing users
+####Deliverables
+####Synchronisation
+####LRS
+####H5P
+####reporting application
+######Ktouchxapi
+
+Deployment
+------------
+
+
+
+
 
 Swagmaps
 --------
