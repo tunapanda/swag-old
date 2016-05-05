@@ -4,7 +4,7 @@
 Related
 -------
 
-* [Swag Technical Overview](TECHNICAL.md)
+* [Swag Technical Overview](TECHNICAL.md)s
 
 ## The Origins of *swag*
 
@@ -92,7 +92,7 @@ the system. The swag that a user have earned is stored in the LRS.
 
 ####Swagpaths
 
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/edit_swagpath.png" />
+<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/edit_swagpath.png" />
 
 A swagpath is a course in the system. It is named this way because it takes the user from one
 swag to another, i.e. the path from one swag to another. 
