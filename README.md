@@ -7,7 +7,7 @@
 
 1. **Money is scarce** for most people and internet bandwidth is expensive. Even people who can afford their own smartphone are often happy to browse Twitter but are very careful to avoid video sites like YouTube. Videos are great learning tools - but a "free" 100MB TED Talk is not free when you earn $2/day and would have to pay $0.50 to $1.00 for that 100MB of bandwidth on your mobile phone. It would actually be cheaper to buy a DVD with the data already on it than to download it yourself! Deploying/distributing offline means that people can learn more and spend less.
 
-2. Internet is unreliable, even in relatively advanced cities like Nairobi. Unreliable internet means waiting for videos to load, which is very frustrating. **Frustration is not conducive to learning.** Hosting content locally decreases load times and removes frustration.
+2. Internet is unreliable, even in relatively connected cities like Nairobi. Unreliable internet means waiting for videos to load, which is very frustrating. **Frustration is not conducive to learning.** Hosting content locally decreases load times and removes frustration.
 
 ## Why teach technology, design, and business skills when so many people have a hard time affording food?
 
