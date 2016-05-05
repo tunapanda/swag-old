@@ -66,7 +66,7 @@ The system allows for knowledge creation from someone who has knowledge in a giv
 
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
 
-There are some concepts that work together to make up the complete system. These are described in more detail throughout this document.
+There are some concepts that work together to make up the complete system. These are described in more detail throughout this document
 * __Swagifact__  
   An item/module of knowledge about a given concept.
 * __Swagpath__ 
@@ -81,6 +81,14 @@ Collection of related Swagifacts
 
 Setup
 ------------
+Swag system is built on wordpress therefore ensure you <a href="https://codex.wordpress.org/Installing_WordPress">install wordpress</a>.  
+
+The system has a custom made theme that ties everything together. Instructions on how to install it can be found <a href="https://github.com/tunapanda/TI-wp-content-theme">here</a>.
+
+To set everything up, there are a number of plugins you need.
+* 
+
+
 Use case
 ------------
 Features and capabilities
