@@ -86,7 +86,13 @@ Swag system is built on wordpress therefore ensure you <a href="https://codex.wo
 The system has a custom made theme that ties everything together. Instructions on how to install it can be found <a href="https://github.com/tunapanda/TI-wp-content-theme">here</a>.
 
 To set everything up, there are a number of plugins you need.
-* 
+* <a href="https://github.com/tunapanda/wp-swag">Main swag plugin</a>
+* <a href="https://github.com/tunapanda/wp-remote-sync">Remote sync</a>
+* <a href="https://github.com/tunapanda/wp-h5p-xapi">H5P xAPI</a>
+* <a href="https://github.com/tunapanda/wp-deliverable"> Deliverables plugin</a> 
+* <a href="https://github.com/tunapanda/wp-xapi-stats"> xAPI stats plugin</a>
+* <a href="https://github.com/tunapanda/wp-dasheroo-kpis">Dasheroo KPIs</a>
+* <a href="">
 
 
 Use case
