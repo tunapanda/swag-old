@@ -122,7 +122,23 @@ discussed above.
 ####Deliverables
 ####Synchronisation
 Synchronisation utilizes the concepts of a version control system, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
-####LRS
+
+####Learning Record Store
+<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
+
+The learning record store keeps track of the progress for each user. In order to talk to the
+LRS we use the xAPI protocol. The LRS is a standardized component that speaks xAPI, i.e. not
+something we have built specifically for the Swag system, and we can replace the currently 
+used LRS with another one as long as that one speak xAPI. We currently use 
+[Learning Locker](https://learninglocker.net/), 
+which is an open source implementation of an xAPI compliant LRS.
+
+xAPI is a RESTful API, which means that it uses HTTP as its underlying protocol. This is the
+same protocol that a web browser uses to talk to a webserver. This means that it is
+relatively simple to create software that speaks it, since it is possible 
+to reuse software libraries already created for other HTTP communication. There are
+implementations of xAPI in most popular programming languages.
+
 ####H5P
 ####reporting application
 ######Ktouchxapi
@@ -174,21 +190,6 @@ It is assumed that when the user completes the swagifact, this will be reported 
 actually implemented is up to the particular swagifact or reporting application.
 
 We have started creating swagifacts in H5P, an open source tool for creating e-learning artifacts in HTML5.
-
-Learning Record Store
----------------------
-
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
-
-The learning record store keeps track of the progress for each user. In order to talk to the LRS we use the xAPI protocol. 
-The LRS is a standardized component that speaks xAPI, i.e. not something we have built specifically for the Swag system, and 
-we can replace the currently used LRS with another one as long as that one speak xAPI. We currently use Learning Locker, 
-which is an open source implementation of an xAPI compliant LRS.
-
-xAPI is a RESTful API, which means that it uses HTTP as its underlying protocol. This is the same protocol that a web browser 
-uses to talk to a webserver. This means that it is relatively simple to create software that speaks it, since it is possible 
-to reuse software libraries already created for other HTTP communication. There are implementations of xAPI in most popular 
-programming languages.
 
 Reporting Applications
 ----------------------
