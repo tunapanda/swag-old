@@ -149,6 +149,8 @@ A swagmap is a map that shows the relationships of swagpaths and their required 
 swag. It is intended to be a guide for the user, where he or she can get an overview of
 what skills build on top of other skills.
 
+Also, the swagmap will show which swag that is completed by the user already.
+
 ####Deliverables
 ####Lesson plans
 ####Feedback
