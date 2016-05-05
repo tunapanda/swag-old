@@ -1,17 +1,13 @@
 # swag
 *swag* is the codename for skills that help people earn a higher income and achieve greater personal freedom through self-expression. This is the software that helps people achieve more *swag*.
 
-Related
--------
-
-* [Swag Technical Overview](TECHNICAL.md)s
-
 # FAQ
 
 ## Why be so concerned with offline deployment? Can't you just put the software and learning materials online?
 
 1. **Money is scarce** for most people and internet bandwidth is expensive. Even people who can afford their own smartphone are often happy to browse Twitter but are very careful to avoid video sites like YouTube. Videos are great learning tools - but a "free" 100MB TED Talk is not free when you earn $2/day and would have to pay $0.50 to $1.00 for that 100MB of bandwidth on your mobile phone. It would actually be cheaper to buy a DVD with the data already on it than to download it yourself! Deploying/distributing offline means that people can learn more and spend less.
-2. Internet is unreliable, even in relatively advanced cities like Nairobi - waiting for videos to load is frustrating. **Frustration is not conducive to learning.** Hosting content locally decreases load times and removes frustration.
+
+2. Internet is unreliable, even in relatively advanced cities like Nairobi. Unreliable internet means waiting for videos to load, which is very frustrating. **Frustration is not conducive to learning.** Hosting content locally decreases load times and removes frustration.
 
 ## Why teach technology, design, and business skills when so many people have a hard time affording food?
 
@@ -21,9 +17,9 @@ On the topic of food: a great deal food in Africa rots or gets eaten by pests be
 
 ## Don't we need more teachers? Are you trying to replace teachers with technology?
 
-Absolutely. We have a saying at Tunapanda Institute that "everyone here is a teacher." We don't just build software and create learning content - we all stand up in front of real people and run real classes. We select and train new [team members](www.tunapanda.org/apprenticeships) based on their aptitute for teaching and ability to facilitate peer-to-peer learning.
+Our planet absolutely needs more teachers. We have a saying at Tunapanda Institute that "everyone on our team is a teacher." We don't just build software and create learning content, each of us regularly stand up in front of real people and runs real classes. We select and train new [team members](www.tunapanda.org/apprenticeships) based on their aptitude for teaching and ability to facilitate peer-to-peer learning.
 
-All the technology we build is aimed at helping teachers, formal or informal, to do their jobs better - and to enable anyone to become a teacher of herself, her family, her community, and her planet.
+All the software, technology tools, and learning materials we create and deploy are aimed at enabling teachers, formal or informal, do their jobs better. And that includes us, we use these tools in our own classes before we send them out to the world. Ultimately we don't want to replace teachers, we want to enable anyone to become a better teacher of herself, her family, her community, and her planet.
 
 ## The Origins of *swag*
 
