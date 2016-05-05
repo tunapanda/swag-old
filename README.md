@@ -111,7 +111,7 @@ To set everything up, there are a number of plugins you need.
 * <a href="https://github.com/tunapanda/wp-deliverable"> Deliverables plugin</a> 
 * <a href="https://github.com/tunapanda/wp-xapi-stats"> xAPI stats plugin</a>
 * <a href="https://github.com/tunapanda/wp-dasheroo-kpis">Dasheroo KPIs</a>
-* <a href="">
+* <a href="https://wordpress.org/plugins/h5p/">H5P</a>
 
 
 Use case
