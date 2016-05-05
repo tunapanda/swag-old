@@ -4,7 +4,7 @@
 Related
 -------
 
-* [Swag Technical Overview](TECHNICAL.md)
+* [Swag Technical Overview](TECHNICAL.md)s
 
 ## The Origins of *swag*
 
@@ -91,13 +91,39 @@ To set everything up, there are a number of plugins you need.
 
 Use case
 ------------
+
 Features and capabilities
 ------------
+####Swag
+A piece of swag is a badge that a user can earn through completing different activities in
+the system. The swag that a user have earned is stored in the LRS.
+
 ####Swagpaths
-This feature is handled by the <a href="https://github.com/tunapanda/wp-swag">wp-swag</a> plugin. 
+
+<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/edit_swagpath.png" />
+
+A swagpath is a course in the system. It is named this way because it takes the user from one
+swag to another, i.e. the path from one swag to another. 
+Each swagpath can have a number of required
+swag, i.e. the prerequisites for the swagpath. It can also have a number of provided swag,
+which are the badges that the user will earn upon completing the swagpath. The prerequisites
+are never "hard", i.e. the system will never stop a user from exploring or attempting a
+swagpath, rather the system will let the user access any swagpath he or she wants to
+acces. If the user does not have the prerequisites for a particular swagpath, the system will
+hint the user that it might make sense to collect the prerequisite swag first.
+
+A swagpath contains a number of items, and each such item is usually a piece of 
+[H5P](https://h5p.org/) content. Each swagpath is implemented in the system as a wordpress
+page, using a number of special Wordpress [shortcodes](https://codex.wordpress.org/Shortcode).
+
+The swag that is required or provided by the swagpath is implemented usig Wordpress
+[custom fields](https://codex.wordpress.org/Custom_Fields).
+
+The screenshot shows the editing of a swagpath, including the shortcodes and custom fields
+discussed above.
+
 ####Swagmaps
 ####Deliverables
-####bagdges
 ####Lesson plans
 ####Feedback
 ####Managing users
