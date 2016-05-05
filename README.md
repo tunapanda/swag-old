@@ -99,7 +99,6 @@ A piece of swag is a badge that a user can earn through completing different act
 the system. The swag that a user have earned is stored in the LRS.
 
 ####Swagpaths
-
 <img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/edit_swagpath.png" />
 
 A swagpath is a course in the system. It is named this way because it takes the user from one
@@ -112,8 +111,11 @@ swagpath, rather the system will let the user access any swagpath he or she want
 acces. If the user does not have the prerequisites for a particular swagpath, the system will
 hint the user that it might make sense to collect the prerequisite swag first.
 
-A swagpath contains a number of items, and each such item is usually a piece of 
-[H5P](https://h5p.org/) content. Each swagpath is implemented in the system as a wordpress
+A swagpath contains a number of items, and each such item is called a swagifact. A swagifact
+is usually a piece of [H5P](https://h5p.org/) content, but there are also other types of
+swagifacts supported. See swagifact below.
+
+Each swagpath is implemented in the system as a wordpress
 page, using a number of special Wordpress [shortcodes](https://codex.wordpress.org/Shortcode).
 
 The swag that is required or provided by the swagpath is implemented usig Wordpress
@@ -122,7 +124,12 @@ The swag that is required or provided by the swagpath is implemented usig Wordpr
 The screenshot shows the editing of a swagpath, including the shortcodes and custom fields
 discussed above.
 
-####Swagmaps
+####Swagmap
+<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap.png" />
+A swagmap is a map that shows the relationships of swagpaths and their required and provided
+swag. It is intended to be a guide for the user, where he or she can get an overview of
+what skills build on top of other skills.
+
 ####Deliverables
 ####Lesson plans
 ####Feedback
@@ -132,7 +139,7 @@ discussed above.
 Synchronisation utilizes the concepts of a version control system, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
 
 ####Learning Record Store
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
+<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
 
 The learning record store keeps track of the progress for each user. In order to talk to the
 LRS we use the xAPI protocol. The LRS is a standardized component that speaks xAPI, i.e. not
