@@ -6,6 +6,25 @@ Related
 
 * [Swag Technical Overview](TECHNICAL.md)s
 
+# FAQ
+
+## Why be so concerned with offline deployment? Can't you just put the software and learning materials online?
+
+1. **Money is scarce** for most people and internet bandwidth is expensive. Even people who can afford their own smartphone are often happy to browse Twitter but are very careful to avoid video sites like YouTube. Videos are great learning tools - but a "free" 100MB TED Talk is not free when you earn $2/day and would have to pay $0.50 to $1.00 for that 100MB of bandwidth on your mobile phone. It would actually be cheaper to buy a DVD with the data already on it than to download it yourself! Deploying/distributing offline means that people can learn more and spend less.
+2. Internet is unreliable, even in relatively advanced cities like Nairobi - waiting for videos to load is frustrating. **Frustration is not conducive to learning.** Hosting content locally decreases load times and removes frustration.
+
+## Why teach technology, design, and business skills when so many people have a hard time affording food?
+
+People earn an income by creating value and solving problems for others. Technologies are effectively tools that enable humans to do more with less. Besides the fact that the internet and other ICT (Information Communication Technology) advances enable people to perform work in Africa for clients around the world, knowledge of such skills can help people a) learn more individually or in groups, b) solve local problems, and c) apply those solutions on a global scale.
+
+On the topic of food: a great deal food in Africa rots or gets eaten by pests because there is a lack of pricing information and efficient distribution channels. The proper deployment of software, other technology, design thinking, and proper business practices can solve problems like that - and those closest to the problems are the ones who will discover the best solutions. But only with the ability to learn.
+
+## Don't we need more teachers? Are you trying to replace teachers with technology?
+
+Absolutely. We have a saying at Tunapanda Institute that "everyone here is a teacher." We don't just build software and create learning content - we all stand up in front of real people and run real classes. We select and train new [team members](www.tunapanda.org/apprenticeships) based on their aptitute for teaching and ability to facilitate peer-to-peer learning.
+
+All the technology we build is aimed at helping teachers, formal or informal, to do their jobs better - and to enable anyone to become a teacher of herself, her family, her community, and her planet.
+
 ## The Origins of *swag*
 
 *Teenager in Kibera, Nairobi, walks into a Tunapanda computer lab after school wearing his school uniform. The fat part of his tie is short, the skinny part goes down to his knees.*
@@ -105,7 +124,6 @@ A piece of swag is a badge that a user can earn through completing different act
 the system. The swag that a user have earned is stored in the LRS.
 
 ####Swagpaths
-
 <img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/edit_swagpath.png" />
 
 A swagpath is a course in the system. It is named this way because it takes the user from one
@@ -118,8 +136,11 @@ swagpath, rather the system will let the user access any swagpath he or she want
 acces. If the user does not have the prerequisites for a particular swagpath, the system will
 hint the user that it might make sense to collect the prerequisite swag first.
 
-A swagpath contains a number of items, and each such item is usually a piece of 
-[H5P](https://h5p.org/) content. Each swagpath is implemented in the system as a wordpress
+A swagpath contains a number of items, and each such item is called a swagifact. A swagifact
+is usually a piece of [H5P](https://h5p.org/) content, but there are also other types of
+swagifacts supported. See swagifact below.
+
+Each swagpath is implemented in the system as a wordpress
 page, using a number of special Wordpress [shortcodes](https://codex.wordpress.org/Shortcode).
 
 The swag that is required or provided by the swagpath is implemented usig Wordpress
@@ -128,7 +149,17 @@ The swag that is required or provided by the swagpath is implemented usig Wordpr
 The screenshot shows the editing of a swagpath, including the shortcodes and custom fields
 discussed above.
 
-####Swagmaps
+####Swagmap
+<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap.png" />
+A swagmap is a map that shows the relationships of swagpaths and their required and provided
+swag. It is intended to be a guide for the user, where he or she can get an overview of
+what skills build on top of other skills.
+
+The circles on the swagmap represents the swag. Hollow circles means swag that is not yet
+completed by the current user, and filled in circles represent collected swag.
+
+The black links in between the swag are links to the swagpaths for colecting the swag.
+
 ####Deliverables
 ####Lesson plans
 ####Feedback
@@ -138,7 +169,7 @@ discussed above.
 Synchronisation utilizes the concepts of a version control system, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
 
 ####Learning Record Store
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
+<img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
 
 The learning record store keeps track of the progress for each user. In order to talk to the
 LRS we use the xAPI protocol. The LRS is a standardized component that speaks xAPI, i.e. not
