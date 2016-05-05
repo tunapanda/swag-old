@@ -149,7 +149,10 @@ A swagmap is a map that shows the relationships of swagpaths and their required 
 swag. It is intended to be a guide for the user, where he or she can get an overview of
 what skills build on top of other skills.
 
-Also, the swagmap will show which swag that is completed by the user already.
+The circles on the swagmap represents the swag. Hollow circles means swag that is not yet
+completed by the current user, and filled in circles represent collected swag.
+
+The black links in between the swag are links to the swagpaths for colecting the swag.
 
 ####Deliverables
 ####Lesson plans
