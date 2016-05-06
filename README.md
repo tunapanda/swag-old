@@ -112,9 +112,10 @@ To set everything up, there are a number of plugins you need.
 * [Profile builder](https://wordpress.org/plugins/profile-builder/)
 * [User shortcodes](https://wordpress.org/plugins/user-shortcodes/)
 * [wpMandrill](https://wordpress.org/plugins/wpmandrill/)(optional)
+
 We use github updator to keep all custome made plugins and theme upto date.
 * [Github updator](https://github.com/afragen/github-updater)
-* 
+ 
 Use case
 ------------
 
