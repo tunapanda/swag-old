@@ -101,15 +101,20 @@ Swag system is built on wordpress therefore ensure you <a href="https://codex.wo
 The system has a custom made theme that ties everything together. Instructions on how to install it can be found <a href="https://github.com/tunapanda/TI-wp-content-theme">here</a>.
 
 To set everything up, there are a number of plugins you need.
-* <a href="https://github.com/tunapanda/wp-swag">Main swag plugin</a>
-* <a href="https://github.com/tunapanda/wp-remote-sync">Remote sync</a>
-* <a href="https://github.com/tunapanda/wp-h5p-xapi">H5P xAPI</a>
-* <a href="https://github.com/tunapanda/wp-deliverable"> Deliverables plugin</a>
-* <a href="https://github.com/tunapanda/wp-xapi-stats"> xAPI stats plugin</a>
-* <a href="https://github.com/tunapanda/wp-dasheroo-kpis">Dasheroo KPIs</a>
-* <a href="https://wordpress.org/plugins/h5p/">H5P</a>
-
-
+* [Main swag plugin](https://github.com/tunapanda/wp-swag)
+* [Remote sync](https://github.com/tunapanda/wp-remote-sync) 
+* [H5P xAPI](https://github.com/tunapanda/wp-h5p-xapi)
+*	[Deliverables plugin](https://github.com/tunapanda/wp-deliverable)
+* [xAPI stats plugin](https://github.com/tunapanda/wp-xapi-stats) 
+* [Dasheroo KPIs](https://github.com/tunapanda/wp-dasheroo-kpis)(optional)
+* [H5P](https://wordpress.org/plugins/h5p/) 
+* [Tabby resposive tabs](https://wordpress.org/plugins/tabby-responsive-tabs/)
+* [Profile builder](https://wordpress.org/plugins/profile-builder/)
+* [User shortcodes](https://wordpress.org/plugins/user-shortcodes/)
+* [wpMandrill](https://wordpress.org/plugins/wpmandrill/)(optional)
+We use github updator to keep all custome made plugins and theme upto date.
+* [Github updator](https://github.com/afragen/github-updater)
+* 
 Use case
 ------------
 
