@@ -96,7 +96,7 @@ Collection of related Swagifacts
 
 Setup
 ------------
-Swag system is built on wordpress therefore ensure you <a href="https://codex.wordpress.org/Installing_WordPress">install wordpress</a>.  
+Swag system is built on wordpress therefore ensure you [install wordpress](https://codex.wordpress.org/Installing_WordPress).  
 
 The system has a custom made theme that ties everything together. Instructions on how to install it can be found <a href="https://github.com/tunapanda/TI-wp-content-theme">here</a>.
 
