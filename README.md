@@ -76,24 +76,6 @@ The system is also designed to be usable as a teaching aid in the classroom whic
 
 The system allows for knowledge creation from someone who has knowledge in a given field and learners a like through suggestions
 
-####Concepts
-
-
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swag_system_diagram.png" />
-
-There are some concepts that work together to make up the complete system. These are described in more detail throughout this document
-* __Swagifact__  
-  An item/module of knowledge about a given concept.
-* __Swagpath__
-Collection of related Swagifacts
-* __Swagmap__  
-  A map of interconnected nodes that guides the user through the learning experience.
-* __Learning Record Store (LRS)__  
-  The database that keeps track of of users progress in a given thing.
-* __Reporting Applications__  
-  An application that sits in the background and gather information about what the user does and reports this to the
-  Learning Record Store.
-
 Setup
 ------------
 Swag system is built on wordpress therefore ensure you [install wordpress](https://codex.wordpress.org/Installing_WordPress).  
