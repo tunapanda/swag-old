@@ -117,14 +117,17 @@ To set everything up, there are a number of plugins you need to install.
 We use github updator to keep all custome made plugins and theme upto date.
 * [Github updator](https://github.com/afragen/github-updater)
  
-Use case
-------------
 
 Features and capabilities
 ------------
 ####Swag
 A piece of swag is a badge that a user can earn through completing different activities in
 the system. The swag that a user have earned is stored in the LRS.
+This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
+
+####Swagifact
+A swagifact represents an atom of learning, example going throuhg a H5P course presentation about say "Ancient astronomy". Most Swagifacts are mostly H5P items and [delivered learning items](https://github.com/tunapanda/wp-deliverable). 
+This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
 
 ####Swagpaths
 <img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/edit_swagpath.png" />
@@ -152,6 +155,8 @@ The swag that is required or provided by the swagpath is implemented usig Wordpr
 The screenshot shows the editing of a swagpath, including the shortcodes and custom fields
 discussed above.
 
+This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
+
 ####Swagmap
 <img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap.png" />
 A swagmap is a map that shows the relationships of swagpaths and their required and provided
@@ -162,12 +167,8 @@ The circles on the swagmap represents the swag. Hollow circles means swag that i
 completed by the current user, and filled in circles represent collected swag.
 
 The black links in between the swag are links to the swagpaths for colecting the swag.
+This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
 
-####Deliverables
-####Lesson plans
-####Feedback
-####Managing users
-####Deliverables
 ####Synchronisation
 Synchronisation utilizes the concepts of a version control system, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
 
@@ -187,60 +188,9 @@ relatively simple to create software that speaks it, since it is possible
 to reuse software libraries already created for other HTTP communication. There are
 implementations of xAPI in most popular programming languages.
 
-####H5P
-####reporting application
-######Ktouchxapi
-
-Deployment
-------------
-
-
-
-
-
-Swagmaps
---------
-
-<img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmapviewer_screenshot.png" />
-
-A Swagmap is a map of interconnected nodes. Each node represents a swagifact, and a node can be shown as complete or not
-yet completed. Depending on how the swagmap is defined, certain swagifacts can be set as prerequisites for other swagifacts,
-so the depending swagifacts are not shown unless the prerequisites are completed.
-
-Clicking on a swagifact in the swagmap will open up information showing what the user needs to do for that swagifact to be
-completed. If the swagifact can be completed online, the user will be taken directly to where the swagifact can be completed.
-
-The swagmap software is a web based software and is currently in an early stage of development. It currently looks like in
-the top right figure.
-
-Here, the circles represents the swagifacts, and the one marked in red is represented as completed. This is a technical
-prototype to test the functionality, the goal is that this should be a compelling, game like interface with game like
-interaction metaphors and animations. The following images can be seen as a mood board to serve as inspiration for what
-we want the application to look like eventually.
-
-<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_1.png" />
-<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_2.png" />
-<img align="center" height="185" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_moodboard_3.jpg" />
-
-The swagmap application is developed on github here: https://github.com/tunapanda/swagmapviewer
-
-Swagifacts
-----------
-
-A swagifact represents an atom of learning. A swagifact can represent something that the user can experience online,
-such as watching a video or answering some multiple choice questions, or it can represent something the user needs to do
-in an outside system, in which case it will be reported by reporting application.
-
-The swag system does very little in terms of defining how a swagifact should actually be implemented. All it knows is that
-a swagifact resides on a url, and upon clicking on the swagifact the user will be taken to that url.
-
-It is assumed that when the user completes the swagifact, this will be reported to the LRS using xAPI, but how this is
-actually implemented is up to the particular swagifact or reporting application.
-
-We have started creating swagifacts in H5P, an open source tool for creating e-learning artifacts in HTML5.
-
-Reporting Applications
-----------------------
+####H5P and content/knowledge creation
+H5P is a third party software that we use to create different types of content/Knowledge. It is very easy to integrate into wordpress and very easy to use. It allows generetes [xAPI statements](https://tincanapi.com/statements-101/) that make it for the system to track the progress of a learner. 
+####Integration of reporting application
 
 <img align="right" width="250" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_ktouchxapi_screenshot.png" border="10"/>
 
@@ -259,3 +209,4 @@ that can be run periodically in the background, and they look and behave in simi
 Ktouchxapi is the first reporting application we have developed, we envision more of these in the future. The next envisioned
 reporting application is for arbtt, which is a system that tracks which applications a user runs and how often and how long
 these applications are used. This way, we can give users swag credits upon using certain applications.
+
