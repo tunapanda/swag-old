@@ -100,7 +100,7 @@ Swag system is built on wordpress therefore ensure you [install wordpress](https
 
 The system has a custom made theme that ties everything together. Instructions on how to install it can be found <a href="https://github.com/tunapanda/TI-wp-content-theme">here</a>.
 
-To set everything up, there are a number of plugins you need.
+To set everything up, there are a number of plugins you need to install.
 * [Main swag plugin](https://github.com/tunapanda/wp-swag)
 * [Remote sync](https://github.com/tunapanda/wp-remote-sync) 
 * [H5P xAPI](https://github.com/tunapanda/wp-h5p-xapi)
@@ -112,6 +112,7 @@ To set everything up, there are a number of plugins you need.
 * [Profile builder](https://wordpress.org/plugins/profile-builder/)
 * [User shortcodes](https://wordpress.org/plugins/user-shortcodes/)
 * [wpMandrill](https://wordpress.org/plugins/wpmandrill/)(optional)
+* [Groups](https://wordpress.org/plugins/groups/) 
 
 We use github updator to keep all custome made plugins and theme upto date.
 * [Github updator](https://github.com/afragen/github-updater)
