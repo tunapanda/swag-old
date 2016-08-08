@@ -1,5 +1,5 @@
 # swag
-*swag* is the codename for skills that help people earn a higher income and achieve greater personal freedom through self-expression. This is the software that helps people achieve more *swag*.
+*swag* is the codename for skills that help people earn a higher income and achieve greater personal freedom through unique self-expression. This is the software that helps people achieve more *swag*.
 
 ## The Origins of *swag*
 
@@ -76,7 +76,7 @@ To set everything up, there are a number of plugins you need to install.
 * [wpMandrill](https://wordpress.org/plugins/wpmandrill/)(optional)
 * [Groups](https://wordpress.org/plugins/groups/) 
 
-We use github updator to keep all custome made plugins and theme upto date.
+We use github updator to keep all custom made plugins and themes upto date.
 * [Github updator](https://github.com/afragen/github-updater)
  
 
@@ -84,11 +84,11 @@ Features and capabilities
 ------------
 ####Swag
 A piece of swag is a badge that a user can earn through completing different activities in
-the system. The swag that a user have earned is stored in the LRS.
+the system. The swag that a user have earned is stored in the LRS(Layout Regularization Scheme).
 This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
 
 ####Swagifact
-A swagifact represents an atom of learning, example going throuhg a H5P course presentation about say "Ancient astronomy". Most Swagifacts are mostly H5P items and [delivered learning items](https://github.com/tunapanda/wp-deliverable). 
+A swagifact represents an atom of learning, example going through a H5P course presentation about say "Ancient astronomy". Most Swagifacts are mostly H5P items and [delivered learning items](https://github.com/tunapanda/wp-deliverable). 
 This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
 
 ####Swagpaths
@@ -101,7 +101,7 @@ swag, i.e. the prerequisites for the swagpath. It can also have a number of prov
 which are the badges that the user will earn upon completing the swagpath. The prerequisites
 are never "hard", i.e. the system will never stop a user from exploring or attempting a
 swagpath, rather the system will let the user access any swagpath he or she wants to
-acces. If the user does not have the prerequisites for a particular swagpath, the system will
+access. If the user does not have the prerequisites for a particular swagpath, the system will
 hint the user that it might make sense to collect the prerequisite swag first.
 
 A swagpath contains a number of items, and each such item is called a swagifact. A swagifact
@@ -132,7 +132,7 @@ The black links in between the swag are links to the swagpaths for colecting the
 This feature is implemented by the [wp-swag](https://github.com/tunapanda/wp-swag) plugin.
 
 ####Synchronisation
-Synchronisation utilizes the concepts of a version control system, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
+Synchronisation utilizes the concepts of a version control systems such as GitHub or Mercurial, where a user can pull, push, merge/sync changes. Synchronization in the swag system is handled by the <a href="https://github.com/tunapanda/wp-remote-sync">wp-remote-sync</a> plugin.
 
 ####Learning Record Store
 <img align="right" width="300" src="https://raw.github.com/tunapanda/swag/master/doc/swagmap_lrs_screenshot.png" />
